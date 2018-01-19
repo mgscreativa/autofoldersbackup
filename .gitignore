@@ -1,5 +1,6 @@
 \.idea/
+\compressed-files/
+\test-data/
 
 conf/multi-source\.test\.conf\.php
 conf/single-source\.test\.conf\.php
-
