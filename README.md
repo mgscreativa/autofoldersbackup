@@ -34,7 +34,7 @@ Configuration files are stored inside **conf** folder, and can be as many as you
         'monthsToKeep'    => 12,
     );
     
-## Multiple folders Sources
+## Multiple Folders Sources
 
     <?php
     setlocale( LC_ALL, "es-AR" );
@@ -66,11 +66,11 @@ Let's say you have a shared hosting account with the addon-domains folder inside
 It's is advisable to tweak the values of ...ToKeep vars, because your backup can take way too much space.
 
 # Usage 
-## From command line:
+## From Command Line:
 
 > /PATH/TO/PHP/CLI/BINARY/php ./index.php --conf=single-source.conf.php
 
-## With HTTP Request
+## Trough HTTP Request
 > /PATH/TO/CURL/BINARY/curl -m 86400 -vs http://domain.com/autofoldersbackup/index.php?conf=single-source.conf.php
 
 You should change he value of **conf** parameter to call different configuration files

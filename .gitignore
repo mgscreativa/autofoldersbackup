@@ -1,5 +1,4 @@
 \.idea/
-\log/
 
 conf/multi-source\.test\.conf\.php
 conf/single-source\.test\.conf\.php
