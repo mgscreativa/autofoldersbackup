@@ -188,7 +188,12 @@ function rotateBackups( $backupName, $backDest, $daysToKeep, $weeksToKeep, $mont
                     $oldestKey           = $key;
                 }
             }
-            unlink( $oldestDaylyFilename );
+
+            if ( file_exists( $oldestDaylyFilename ) )
+            {
+                unlink( $oldestDaylyFilename );
+            }
+
             unset( $filesDaily[$oldestKey] );
         }
     }
@@ -218,7 +223,12 @@ function rotateBackups( $backupName, $backDest, $daysToKeep, $weeksToKeep, $mont
                         $oldestKey            = $key;
                     }
                 }
-                unlink( $oldestWeeklyFilename );
+
+                if ( file_exists( $oldestWeeklyFilename ) )
+                {
+                    unlink( $oldestWeeklyFilename );
+                }
+
                 unset( $filesWeekly[$oldestKey] );
             }
         }
@@ -249,7 +259,12 @@ function rotateBackups( $backupName, $backDest, $daysToKeep, $weeksToKeep, $mont
                         $oldestKey             = $key;
                     }
                 }
-                unlink( $oldestMonthlyFilename );
+
+                if ( file_exists( $oldestMonthlyFilename ) )
+                {
+                    unlink( $oldestMonthlyFilename );
+                }
+
                 unset( $filesMonthly[$oldestKey] );
             }
         }
