@@ -70,7 +70,7 @@ It's is advisable to tweak the values of ...ToKeep vars, because your backup can
 
 > /PATH/TO/PHP/CLI/BINARY/php ./index.php --conf=single-source.conf.php
 
-## Trough HTTP Request
+## Through HTTP Request
 > /PATH/TO/CURL/BINARY/curl -m 86400 -vs http://domain.com/autofoldersbackup/index.php?conf=single-source.conf.php
 
 You should change he value of **conf** parameter to call different configuration files
