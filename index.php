@@ -127,7 +127,7 @@ function rotateBackups($backupName, $backDest, $daysToKeep, $weeksToKeep, $month
 
     $newestTimestamp = 0;
     foreach ($filesDaily as $file) {
-        $fileTimestamp = filemtime($excludeFoldersfile);
+        $fileTimestamp = filemtime($file);
         if ($fileTimestamp > $newestTimestamp) {
             $newestDaylyFilename = $file;
             $newestTimestamp = $fileTimestamp;
@@ -254,6 +254,7 @@ function backupFolder($backSource, $backDest, $excludeFolders)
 
     logWrite('Started backup compression of ' . $backSource);
     if (function_exists('shell_exec')) {
+        logWrite('Using command line compressor');
         shell_exec('zip -r ' . $zipfilename . ' .');
     } else {
         $dirList = new RecursiveDirectoryIterator('./', FilesystemIterator::SKIP_DOTS);
